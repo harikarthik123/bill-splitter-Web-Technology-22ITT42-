@@ -1,0 +1,23 @@
+<h2>Add Expense - {{ tour?.name }}</h2>
+
+<div *ngIf="tour">
+  <label>Description:</label>
+  <input [(ngModel)]="description" placeholder="e.g. Dinner" /><br />
+
+  <label>Amount:</label>
+  <input type="number" [(ngModel)]="amount" /><br />
+
+  <label>Paid By:</label>
+  <select [(ngModel)]="paidBy">
+    <option *ngFor="let p of tour.participants" [value]="p">{{ p }}</option>
+  </select><br />
+
+  <label>Shared By:</label><br />
+  <div *ngFor="let p of tour.participants">
+    <input type="checkbox" [checked]="sharedBy.includes(p)" (change)="toggleShared(p)" />
+    {{ p }}
+  </div>
+
+  <button (click)="addExpense()">Add Expense</button>
+  <a [routerLink]="['/summary', tour._id]">View Summary</a>
+</div>

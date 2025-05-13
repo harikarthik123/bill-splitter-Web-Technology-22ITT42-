@@ -1,0 +1,23 @@
+<h2>Fair & Fun Touring — Without the Math Fights!</h2>
+
+<div>
+  <input [(ngModel)]="tourName" placeholder="Tour Name" />
+  <input [(ngModel)]="participantInput" placeholder="Add Participant" />
+  <button (click)="addParticipant()">Add</button>
+</div>
+
+<ul>
+  <li *ngFor="let p of participants">{{ p }}</li>
+</ul>
+
+<button (click)="createTour()">Create Tour</button>
+
+<hr>
+
+<h3>Existing Tours:</h3>
+<ul>
+  <li *ngFor="let tour of tours">
+    {{ tour.name }} ({{ tour.participants.length }} people)
+    <a [routerLink]="['/expenses', tour._id]">View</a>
+  </li>
+</ul>

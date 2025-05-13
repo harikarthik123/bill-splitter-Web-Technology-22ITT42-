@@ -1,0 +1,11 @@
+<h2>Summary</h2>
+
+<div *ngIf="balances">
+  <ul>
+    <li *ngFor="let person of balanceKeys">
+      <strong>{{ person }}</strong>: {{ getFormattedAmount(balances[person]) }}
+    </li>
+  </ul>
+</div>
+
+<a routerLink="/">Back to Tours</a>

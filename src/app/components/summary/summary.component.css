@@ -1,0 +1,46 @@
+.container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #e67e22;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+li {
+  background-color: #fdf2e9;
+  padding: 1rem;
+  border-left: 5px solid #e67e22;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+strong {
+  color: #d35400;
+}
+
+a {
+  display: block;
+  margin-top: 2rem;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
